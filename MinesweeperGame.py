@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 
 
-class MinesweeperGame():
+class MinesweeperGame:
     def __init__(self, length, width, num_mines):
         self.length = length
         self.width = width
@@ -76,6 +76,7 @@ class MinesweeperGame():
         plt.show()
         '''
 
+
 if __name__ == '__main__':
-    ms_game = MinesweeperGame(10, 10, 18)
+    ms_game = MinesweeperGame(10, 10, 25)
     ms_game.render_grid()
