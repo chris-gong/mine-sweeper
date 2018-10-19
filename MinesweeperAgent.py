@@ -4,7 +4,7 @@ class GameTile:
     def __init__(self):
         pass
 
-class MineSweeper:
+class MineSweeperAgent:
     def __init__(self):
         self.playing = False;
         self.kb = None
