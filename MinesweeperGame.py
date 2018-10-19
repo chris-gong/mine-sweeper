@@ -1,6 +1,6 @@
 import numpy as np
 
-class MinesweeperGame:
+class MinesweeperGame():
     def __init__(self, length, width, num_mines):
         self.length = length
         self.width = width
@@ -21,5 +21,5 @@ class MinesweeperGame:
     def in_bounds(self, x, y):
         return not ((x < 0 or x >= self.width)
                     or (y < 0 or y >= self.length))
-            
+    
     def generate_new_game(self, )
