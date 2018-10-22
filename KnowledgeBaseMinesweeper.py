@@ -10,6 +10,9 @@ class Predicate(Enum):
 
 class KnowledgeBase():
     def __init__(self,length,width):
-        self.minedPre
-        
+        self.mine_predicates_arr = [[Predicate.undetermined for y in range(length)] for x in range(width)]
+        self.adj_mine_arr = [[-1 for y in range(length)] for x in range(width)]
+
+if __name__ == '__main__':
+    kb = KnowledgeBase(5,5)
     
