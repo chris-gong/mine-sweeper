@@ -36,6 +36,15 @@ class MineSweeperAgent:
         # perform PBC if nothing to safely visit
         # guess if there is nothing clear and PBC on every viable option
 
+    def query_tile_human(self, x, y):
+        # returns 0-8 for num of adj mines or 9 if the tile is mined
+        pass
+
+    def query_tile_cpu(self, x, y):
+        # returns 0-8 for num of adj mines or 9 if the tile is mined
+        return self.game.grid[x][y]
+        
+
     def proof_by_contradiction(self, x, y):
         # Returns a predicate on if the arg tile is mined
         predicates = self.kb.mine_predicates_arr
