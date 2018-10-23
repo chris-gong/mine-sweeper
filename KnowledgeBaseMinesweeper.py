@@ -11,9 +11,8 @@ class KnowledgeBase():
     def __init__(self, length, width):
         self.length = length
         self.width = width
-        self.tile_arr = [[Tile(x,y) for y in range(length)]
+        self.tile_arr = [[Tile(x, y) for y in range(length)]
                          for x in range(width)]
-        self.satisfied
 
     def in_bounds(self, x, y):
         return not ((x < 0 or x >= self.width)

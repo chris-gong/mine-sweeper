@@ -16,8 +16,8 @@ class MineSweeperAgent:
         # Query the user for a width and length
         length = int(input("What is the length of the game board?"))
         width = int(input("What is the width of the game board?"))
-        num_mines = int(input("How many mines do you want the generated\
-                              map to have?"))
+        num_mines = int(input("How many mines do you want the generated"
+                              "map to have?"))
 
         self.length = length
         self.width = width
@@ -70,7 +70,8 @@ class MineSweeperAgent:
         # Returns a predicate on if the arg tile is mined
         if cur_tile.is_mined is not Predicate.undetermined:
             # Error no need to do PBC on an already known tile
-            return
+            return4
+
         # Add p to KB and try to satisfy
         cur_tile.is_mined = Predicate.true
         p1 = self.try_to_satisfy(x, y)
