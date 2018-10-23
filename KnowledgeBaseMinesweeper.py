@@ -13,12 +13,26 @@ class KnowledgeBase():
         self.width = width
         self.tile_arr = [[Tile(x, y) for y in range(length)]
                          for x in range(width)]
+        self.unsatisfied_tiles = []
+
+    def visit_tile(self, tile, num):
+            tile.discovered = True
+            tile.adj_mines = num
+            tile.is_mined = Predicate.falsenum
+            i = self.cmp_tile_to_adj(tile)
+            if i >= 0:
+                # Error conflict when discovering new node
+                return
+            elif i == 0:
+                pass
+            else:
+                self.unsatisfied_tile.append(tile)
 
     def in_bounds(self, x, y):
         return not ((x < 0 or x >= self.width)
                     or (y < 0 or y >= self.length))
 
-    def check_tile_for_conflicts(self, tile):
+    def cmp_tile_to_adj(self, tile):
         count = 0
         x = tile.x
         y = tile.y
@@ -29,8 +43,11 @@ class KnowledgeBase():
                         self.tile_arr[i][j] == Predicate.true
                         and not (i == x and j == y)):
                     count += 1
-        if count >= tile.adj_mines:
-            return True
+        return count - tile.adj_mines
+
+    def try_to_satisfy(self):
+        while len(self.unsa >= 0):
+            pass
 
 
 class Tile():

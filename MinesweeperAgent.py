@@ -31,7 +31,7 @@ class MineSweeperAgent:
         width = int(input("What is the width of the game board?"))
         self.kb = KnowledgeBase(length, width)
         self.game_type = "HUMAN"
-#
+
     def play_game(self):
         if self.gameType is not None:
             # tried to play game when not possible
@@ -45,9 +45,7 @@ class MineSweeperAgent:
             # TODO gameover
             return
         elif num >= 0 and num <= 8:
-            cur_tile.discovered = True
-            cur_tile.adj_mines = num
-            cur_tile.is_mined = Predicate.false
+            self.kb.visit_tile(cur_tile,num)
         else:
             # Error invalid num
             return
@@ -66,16 +64,19 @@ class MineSweeperAgent:
         self.process_query(num, cur_tile)
 
     def proof_by_contradiction(self, x, y):
-        cur_tile = self.kb.tile_arr[x][y]
+        test_kb = deepcopy(self.kb)
+        cur_tile = test_kb.tile_arr[x][y]
         # Returns a predicate on if the arg tile is mined
         if cur_tile.is_mined is not Predicate.undetermined:
             # Error no need to do PBC on an already known tile
-            return4
-
+            return
         # Add p to KB and try to satisfy
         cur_tile.is_mined = Predicate.true
-        p1 = self.try_to_satisfy(x, y)
+        p1 = test_kb.try_to_satisfy(x, y)
+
         # Add not p to KB and try to satisfy
+        test_kb = deepcopy(self.kb)
+        cur_tile = test_kb.tile_arr[x][y]
         cur_tile.is_mined = Predicate.false
         p2 = self.try_to_satisfy(x, y)
 
@@ -90,18 +91,7 @@ class MineSweeperAgent:
             return
         return
 
-    def try_to_satisfy(self, x, y):
-        test_kb = deepcopy(self.kb)
 
-        result = False
-        # TODO
-        '''
-        1. Check if the current setup conflicts
-        2. Add mines to try and satisfy
-        3. If not possible
-        '''
-        del(test_kb)
-        return result
 
 
 if __name__ == '__main__':
