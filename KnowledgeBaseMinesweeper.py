@@ -58,12 +58,37 @@ class KnowledgeBase():
                             and self.tile_arr[i][j].is_mined is
                             Predicate.undetermined):
                         possible_mines.append(self.tile_arr[i][j])
+        last_mine_stack = []
+        subset_end = -1
+        while True:
+            if subset_end+1 is len(possible_mines):
+                global_sat = check_global_sat
+                if global_sat is true:
+                    return true
+                else:
+                    if len(last_mine_stack) is 0:
+                        return false
+                    subset_end = last_mine_stack.pop()
+                    possible_mines[subset_end].is_mined = Predicate.false
+            # Add Mine
+            subset_end += 1
+            possible_mines[subset_end].is_mined = Predicate.true
+            last_mine_stack.push(subset_end)
+            # Local sat
+            local_sat = check_local_sat(possible_mines[subset_end])
+            if local_sat <= 0:
+                continue
+            elif local_sat == 0 and check_global_sat:
+                return True
+            elif local_sat >= 0:
+                last_mine_stack.pop()
+                possible_mines[subset_end].is_mined = Predicate.false
 
+    def check_global_sat(self):
+        pass
 
-
-
-
-
+    def check_local_sat(self,tile):
+        pass
 
 class Tile():
     def __init__(self, x, y):

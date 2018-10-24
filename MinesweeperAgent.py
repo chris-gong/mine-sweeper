@@ -46,7 +46,7 @@ class MineSweeperAgent:
             # TODO gameover
             return
         elif num >= 0 and num <= 8:
-            self.kb.visit_tile(cur_tile,num)
+            self.kb.visit_tile(cur_tile, num)
         else:
             # Error invalid num
             return
