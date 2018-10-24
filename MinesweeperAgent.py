@@ -12,6 +12,8 @@ class MineSweeperAgent:
     def __init__(self):
         self.gameType = None
         self.kb = None
+        self.gameover = False
+        self.won = False
 
     def new_cpu_game(self):
         # Query the user for a width and length
@@ -21,13 +23,15 @@ class MineSweeperAgent:
         num_mines = int(input("How many mines do you want the generated"
                               "map to have?"))
         '''
-        length,width,num_mines = (5,5,5)
+        length,width,num_mines = (10,10,20)
 
         self.length = length
         self.width = width
         self.kb = KnowledgeBase(length, width)
         self.game = MinesweeperGame(length, width, num_mines)
         self.game_type = "CPU"
+        self.gameover = False
+        self.won = False
 
     def new_human_game(self):
         # Query the user for a width and length
@@ -35,6 +39,8 @@ class MineSweeperAgent:
         width = int(input("What is the width of the game board?"))
         self.kb = KnowledgeBase(length, width)
         self.game_type = "HUMAN"
+        self.gameover = False
+        self.won = False
 
     def play_game(self):
         if self.gameType is not None:
@@ -43,10 +49,62 @@ class MineSweeperAgent:
         # decide on which tile to query
         # perform PBC if nothing to safely visit
         # guess if there is nothing clear and PBC on every viable option
+        # First guess is middle of game
+        unvisited_cleared_tiles = set()
+        fringe = set() # unknown tiles that are adjacent to discovered nodes
+
+        first_tile = self.query_tile(int(self.length/2), int(self.width/2))
+        adj_unvisited = self.kb.get_unvisited_neighbors(first_tile)
+        for tile in adj_unvisited:
+            fringe.add(tile)
+        while not self.gameover:
+            if len(unvisited_cleared_tiles) != 0:
+                # If there are any safe nodes to go to make those moves
+                while len(unvisited_cleared_tiles) != 0:
+                    tile = unvisited_cleared_tiles.pop()
+                    self.query_tile(tile.x,tile.y)
+                    adj_unvisited = self.kb.get_unvisited_neighbors(tile)
+                    for tile in adj_unvisited:
+                        fringe.add(tile)
+                continue
+            if len(fringe) != 0:
+                # Nowhere safe rn to go to so search fringe for safe node
+                for tile in fringe:
+                    tiles_to_remove = []
+                    is_tile_mined = self.proof_by_contradiction(tile.x,tile.y)
+                    if is_tile_mined is Predicate.true:
+                        self.kb.flag_mine(tile)
+                        tiles_to_remove.append(tile)
+                    elif is_tile_mined is Predicate.false:
+                        tile.is_mined = Predicate.false
+                        unvisited_cleared_tiles.add(tile)
+                        tiles_to_remove.append(tile)
+                    else:
+                        continue
+                for tile in tiles_to_remove:
+                    fringe.remove(tile)
+                fringe.update()
+                if len(unvisited_cleared_tiles) == 0:
+                    #Have to guess because query did not find anything
+                    print("guess - nowhere safe to go")
+                    self.kb.print_kb()
+                    return
+
+                # TODO queries concluded nothing
+            else:
+                # TODO If the fringe is empty that means all adjacent
+                # undiscovered nodes are mines so pick random undertermined mine
+                print("guess -surroundded by mines")
+                self.kb.print_kb()
+                return
+        print("GAMEOVER")
+        self.kb.print_kb()
+        return
 
     def process_query(self, num, cur_tile):
-        if num is 9:
-            # TODO gameover
+        if num == 9:
+            self.gameover = True
+            self.won = False
             return
         elif num >= 0 and num <= 8:
             self.kb.visit_tile(cur_tile, num)
@@ -54,18 +112,26 @@ class MineSweeperAgent:
             # Error invalid num
             return
 
+    def query_tile(self, x, y):
+        if self.gameType is "HUMAN":
+            return self.query_tile_human(x, y)
+        else:
+            return self.query_tile_cpu(x, y)
+
     def query_tile_human(self, x, y):
         # returns 0-8 for num of adj mines or 9 if the tile is mined
         querystring = "What is in space ({},{})", (x, y)
         num = int(input(querystring))
         cur_tile = self.kb.tile_arr[x][y]
         self.process_query(num, cur_tile)
+        return cur_tile
 
     def query_tile_cpu(self, x, y):
         # returns 0-8 for num of adj mines or 9 if the tile is mined
-        num = self.game.grid[x][y]
+        num = int(self.game.grid[x][y])
         cur_tile = self.kb.tile_arr[x][y]
         self.process_query(num, cur_tile)
+        return cur_tile
 
     def proof_by_contradiction(self, x, y):
         test_kb = deepcopy(self.kb)
@@ -86,17 +152,15 @@ class MineSweeperAgent:
         cur_tile = test_kb.tile_arr[x][y]
         test_kb.unflag_mine(cur_tile)
         p2 = test_kb.try_to_satisfy()
-        print("p1: " + str(p1))
-        print("p2: " + str(p2))
+        # print("p1: " + str(p1))
+        # print("p2: " + str(p2))
 
         if p1 and p2:
-            pass
+            return Predicate.undetermined
         elif p1 and not p2:
-            cur_tile.is_mined = Predicate.true
-            return True
+            return Predicate.true
         elif not p1 and p2:
-            cur_tile.is_mined = Predicate.false
-            return False
+            return Predicate.false
         else:
             # Error
             print("Error: Inconsistent kb")
@@ -107,11 +171,12 @@ class MineSweeperAgent:
 
 
 if __name__ == '__main__':
-
     kb = KnowledgeBase(5, 5)
     tile = kb.tile_arr[3][4]
-    kb.visit_tile(tile, 1)
+    kb.visit_tile(tile, 0)
     tile = kb.tile_arr[2][4]
+    kb.visit_tile(tile, 2)
+    tile = kb.tile_arr[1][2]
     kb.visit_tile(tile, 2)
     tile = kb.tile_arr[1][4]
     kb.visit_tile(tile, 1)
@@ -127,12 +192,9 @@ if __name__ == '__main__':
     agent.kb = kb
 
     kb.print_kb()
-    result = agent.proof_by_contradiction(0,3)
+    result = agent.proof_by_contradiction(3,3)
     print("proof " + str(result))
 
     agent = MineSweeperAgent()
     agent.new_cpu_game()
-    print("HEY")
-
-
-
+    agent.play_game()

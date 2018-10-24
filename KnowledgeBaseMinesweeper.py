@@ -66,7 +66,7 @@ class KnowledgeBase():
                 if global_sat is True:
                     return True
                 else:
-                    if len(last_mine_stack) is 0:
+                    if len(last_mine_stack) == 0:
                         return False
                     subset_end = last_mine_stack.pop()
                     possible_mines[subset_end].is_mined = Predicate.false
@@ -89,7 +89,7 @@ class KnowledgeBase():
         for x in range(self.width):
             for y in range(self.length):
                 t = self.tile_arr[x][y]
-                if(t.visited and (self.cmp_tile_to_adj(t)is not 0)):
+                if(t.visited and (self.cmp_tile_to_adj(t) != 0)):
                     return False
         return True
 
@@ -127,7 +127,7 @@ class KnowledgeBase():
                 if (self.in_bounds(i, j)):
                     adj_tile = self.tile_arr[i][j]
                     count = self.cmp_tile_to_adj(adj_tile)
-                    if count is 0:
+                    if count == 0:
                         self.unsatisfied_tiles.remove(adj_tile)
 
     def unflag_mine(self, tile):
@@ -140,7 +140,7 @@ class KnowledgeBase():
                 if (self.in_bounds(i, j)):
                     adj_tile = self.tile_arr[i][j]
                     count = self.cmp_tile_to_adj(adj_tile)
-                    if count is -1:
+                    if count == -1:
                         self.unsatisfied_tiles.append(adj_tile)
 
     def print_kb(self):
@@ -158,7 +158,16 @@ class KnowledgeBase():
         print(string)
         return
 
-
+    def get_unvisited_neighbors(self, tile):
+        # TODO
+        tlist = []
+        x = tile.x
+        y = tile.y
+        for i in range(x-1, x+2):
+            for j in range(y-1, y+2):
+                if (self.in_bounds(i, j) and not(tile.x == i and tile.y ==j)):
+                    tlist.append(self.tile_arr[i][j])
+        return tlist
 
 class Tile():
     def __init__(self, x, y):
@@ -170,17 +179,4 @@ class Tile():
 
 
 if __name__ == '__main__':
-    kb = KnowledgeBase(5, 5)
-    tile = kb.tile_arr[2][3]
-    kb.visit_tile(tile, 3)
-    tile = kb.tile_arr[4][4]
-    kb.visit_tile(tile, 1)
-    tile = kb.tile_arr[4][3]
-    kb.visit_tile(tile, 1)
-    tile2 = kb.tile_arr[3][3]
-    tile2.is_mined = Predicate.true
-    tile3 = kb.tile_arr[2][2]
-    tile3.is_mined = Predicate.true
-    print(kb.check_local_sat(kb.tile_arr[3][3]))
-    print(kb.try_to_satisfy())
-
+    pass
