@@ -57,12 +57,13 @@ class KnowledgeBase():
                     if (self.in_bounds(i, j)
                             and self.tile_arr[i][j].is_mined is
                             Predicate.undetermined):
+                        self.tile_arr[i][j].is_mined = Predicate.false
                         possible_mines.append(self.tile_arr[i][j])
         last_mine_stack = []
         subset_end = -1
         while True:
             if subset_end+1 is len(possible_mines):
-                global_sat = check_global_sat
+                global_sat = check_global_sat()
                 if global_sat is true:
                     return true
                 else:
@@ -73,7 +74,7 @@ class KnowledgeBase():
             # Add Mine
             subset_end += 1
             possible_mines[subset_end].is_mined = Predicate.true
-            last_mine_stack.push(subset_end)
+            last_mine_stack.append(subset_end)
             # Local sat
             local_sat = check_local_sat(possible_mines[subset_end])
             if local_sat <= 0:
@@ -85,10 +86,35 @@ class KnowledgeBase():
                 possible_mines[subset_end].is_mined = Predicate.false
 
     def check_global_sat(self):
-        pass
+        for x in range (self.width):
+           for y in range(self.length):
+                t = self.tile_arr[x][y]
+                if((t.visited == True) and (t.cmp_tile_to_adj()is not 0)):
+                    return False
+        return True
 
     def check_local_sat(self,tile):
-        pass
+        x = tile.x
+        y = tile.y
+        under_satisfied = False
+        # Count adjacent mines of neighbors of tile
+        for i in range(x-1, x+2):
+            for j in range(y-1, y+2):
+                if (self.is_bounds(i,j)):
+                    count = self.cmp_tile_to_adj(self.tile_arr[i][j])
+                    if count > 0:
+                        #too many mines, oversatisfied
+                        return 1
+                    elif count < 0:
+                        #under satisfied at one point, but don't return 
+                        #since it still may over satisfy at one point
+                        under_satisfied = True
+        #if it is not under satisfied then it's satisfied locally
+        if under_satisfied:
+            return -1
+        else:
+            return 0
+
 
 class Tile():
     def __init__(self, x, y):
