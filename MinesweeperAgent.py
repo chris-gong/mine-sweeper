@@ -2,6 +2,7 @@ from KnowledgeBaseMinesweeper import KnowledgeBase, Predicate
 from MinesweeperGame import MinesweeperGame
 from copy import deepcopy
 
+
 class GameTile:
     def __init__(self):
         pass

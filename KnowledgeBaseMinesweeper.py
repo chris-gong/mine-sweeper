@@ -46,8 +46,23 @@ class KnowledgeBase():
         return count - tile.adj_mines
 
     def try_to_satisfy(self):
-        while len(self.unsa >= 0):
-            pass
+        # TODO
+        possible_mines = []
+        for unsat_tile in self.unsatisfied_tiles:
+            x = unsat_tile.x
+            y = unsat_tile.y
+            # Count adjacent mines
+            for i in range(x-1, x+2):
+                for j in range(y-1, y+2):
+                    if (self.in_bounds(i, j)
+                            and self.tile_arr[i][j].is_mined is
+                            Predicate.undetermined):
+                        possible_mines.append(self.tile_arr[i][j])
+
+
+
+
+
 
 
 class Tile():
