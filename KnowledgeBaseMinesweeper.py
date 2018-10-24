@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class Predicate(Enum):
     true = 1
     false = 2
@@ -16,9 +15,9 @@ class KnowledgeBase():
         self.unsatisfied_tiles = []
 
     def visit_tile(self, tile, num):
-            tile.discovered = True
+            tile.visited = True
             tile.adj_mines = num
-            tile.is_mined = Predicate.falsenum
+            tile.is_mined = Predicate.false
             i = self.cmp_tile_to_adj(tile)
             if i >= 0:
                 # Error conflict when discovering new node
@@ -26,7 +25,7 @@ class KnowledgeBase():
             elif i == 0:
                 pass
             else:
-                self.unsatisfied_tile.append(tile)
+                self.unsatisfied_tiles.append(tile)
 
     def in_bounds(self, x, y):
         return not ((x < 0 or x >= self.width)
@@ -40,7 +39,7 @@ class KnowledgeBase():
         for i in range(x-1, x+2):
             for j in range(y-1, y+2):
                 if (self.in_bounds(i, j) and
-                        self.tile_arr[i][j] == Predicate.true
+                        self.tile_arr[i][j].is_mined == Predicate.true
                         and not (i == x and j == y)):
                     count += 1
         return count - tile.adj_mines
@@ -62,58 +61,103 @@ class KnowledgeBase():
         last_mine_stack = []
         subset_end = -1
         while True:
-            if subset_end+1 is len(possible_mines):
-                global_sat = check_global_sat()
-                if global_sat is true:
-                    return true
+            if subset_end+1 >= len(possible_mines):
+                global_sat = self.check_global_sat()
+                if global_sat is True:
+                    return True
                 else:
                     if len(last_mine_stack) is 0:
-                        return false
+                        return False
                     subset_end = last_mine_stack.pop()
                     possible_mines[subset_end].is_mined = Predicate.false
+                    continue
             # Add Mine
             subset_end += 1
             possible_mines[subset_end].is_mined = Predicate.true
             last_mine_stack.append(subset_end)
             # Local sat
-            local_sat = check_local_sat(possible_mines[subset_end])
+            local_sat = self.check_local_sat(possible_mines[subset_end])
             if local_sat <= 0:
                 continue
-            elif local_sat == 0 and check_global_sat:
+            elif local_sat == 0 and self.check_global_sat:
                 return True
             elif local_sat >= 0:
                 last_mine_stack.pop()
                 possible_mines[subset_end].is_mined = Predicate.false
 
     def check_global_sat(self):
-        for x in range (self.width):
-           for y in range(self.length):
+        for x in range(self.width):
+            for y in range(self.length):
                 t = self.tile_arr[x][y]
-                if((t.visited == True) and (t.cmp_tile_to_adj()is not 0)):
+                if(t.visited and (self.cmp_tile_to_adj(t)is not 0)):
                     return False
         return True
 
-    def check_local_sat(self,tile):
+    def check_local_sat(self, tile):
         x = tile.x
         y = tile.y
         under_satisfied = False
         # Count adjacent mines of neighbors of tile
         for i in range(x-1, x+2):
             for j in range(y-1, y+2):
-                if (self.is_bounds(i,j)):
+                if (self.in_bounds(i, j)):
+                    if not self.tile_arr[i][j].visited:
+                        continue
                     count = self.cmp_tile_to_adj(self.tile_arr[i][j])
                     if count > 0:
-                        #too many mines, oversatisfied
+                        # too many mines, oversatisfied
                         return 1
                     elif count < 0:
-                        #under satisfied at one point, but don't return 
-                        #since it still may over satisfy at one point
+                        # under satisfied at one point, but don't return
+                        # since it still may over satisfy at one point
                         under_satisfied = True
-        #if it is not under satisfied then it's satisfied locally
+        # if it is not under satisfied then it's satisfied locally
         if under_satisfied:
             return -1
         else:
             return 0
+
+    def flag_mine(self, tile):
+        tile.is_mined = Predicate.true
+        x = tile.x
+        y = tile.y
+        # Count adjacent mines of neighbors of tile
+        for i in range(x-1, x+2):
+            for j in range(y-1, y+2):
+                if (self.in_bounds(i, j)):
+                    adj_tile = self.tile_arr[i][j]
+                    count = self.cmp_tile_to_adj(adj_tile)
+                    if count is 0:
+                        self.unsatisfied_tiles.remove(adj_tile)
+
+    def unflag_mine(self, tile):
+        tile.is_mined = Predicate.false
+        x = tile.x
+        y = tile.y
+        # Count adjacent mines of neighbors of tile
+        for i in range(x-1, x+2):
+            for j in range(y-1, y+2):
+                if (self.in_bounds(i, j)):
+                    adj_tile = self.tile_arr[i][j]
+                    count = self.cmp_tile_to_adj(adj_tile)
+                    if count is -1:
+                        self.unsatisfied_tiles.append(adj_tile)
+
+    def print_kb(self):
+        string = ""
+        for y in range(self.length):
+            for x in range(self.width):
+                tile = self.tile_arr[x][y]
+                if tile.is_mined is Predicate.true:
+                    string += "M "
+                elif tile.visited:
+                    string += str(tile.adj_mines)+" "
+                else:
+                    string += "X "
+            string += "\n"
+        print(string)
+        return
+
 
 
 class Tile():
@@ -127,3 +171,16 @@ class Tile():
 
 if __name__ == '__main__':
     kb = KnowledgeBase(5, 5)
+    tile = kb.tile_arr[2][3]
+    kb.visit_tile(tile, 3)
+    tile = kb.tile_arr[4][4]
+    kb.visit_tile(tile, 1)
+    tile = kb.tile_arr[4][3]
+    kb.visit_tile(tile, 1)
+    tile2 = kb.tile_arr[3][3]
+    tile2.is_mined = Predicate.true
+    tile3 = kb.tile_arr[2][2]
+    tile3.is_mined = Predicate.true
+    print(kb.check_local_sat(kb.tile_arr[3][3]))
+    print(kb.try_to_satisfy())
+
