@@ -217,9 +217,9 @@ if __name__ == '__main__':
     # print(kb2.try_to_satisfy())
 
     result = agent.proof_by_contradiction(3,3)
+    print("proof " + str(result))
     '''
     agent = MineSweeperAgent()
-    print("proof " + str(result))
 
     agent = MineSweeperAgent()
     agent.new_cpu_game()
