@@ -71,8 +71,8 @@ class MineSweeperAgent:
             if len(fringe) != 0:
                 # Nowhere safe rn to go to so search fringe for safe node
                 print("querying fringe")
+                tiles_to_remove = []
                 for tile in fringe:
-                    tiles_to_remove = []
                     is_tile_mined = self.proof_by_contradiction(tile.x,tile.y)
                     if is_tile_mined is Predicate.true:
                         self.kb.flag_mine(tile)
@@ -85,12 +85,13 @@ class MineSweeperAgent:
                         continue
                 for tile in tiles_to_remove:
                     fringe.remove(tile)
-                fringe.update()
                 if len(unvisited_cleared_tiles) == 0:
                     # Have to guess because we only have undetermined tiles left,
                     # no cleared tiles (predicate false or true)
                     print("guess - nowhere safe to go")
-                    unvisited_cleared_tiles.add(fringe.pop())
+                    guess_tile = fringe.pop()
+                    print("guessing: "+str(guess_tile.x)+','+str(guess_tile.y))
+                    unvisited_cleared_tiles.add(guess_tile)
                     # self.kb.print_kb()
                     # return
 
@@ -102,17 +103,25 @@ class MineSweeperAgent:
                 # guess randomly on a unvisited tile because
                 # no adjacent tiles to visit (for e.g. remaining
                 # tiles are surrounded by mines
-                unvisited_tiles = []
+                candidates = []
                 for i in range(len(self.kb.tile_arr)):
                     for j in range(len(self.kb.tile_arr[i])):
-                        if(not self.kb.tile_arr[i][j].visited):
-                            unvisited_tiles.append(self.kb.tile_arr[i][j])
-                rand_index = random.randint(0, len(unvisited_tiles) - 1)
-                unvisited_cleared_tiles.add(unvisited_tiles[rand_index])
+                        if(self.kb.tile_arr[i][j].is_mined is Predicate.undetermined):
+                            candidates.append(self.kb.tile_arr[i][j])
+                if len(candidates) == 0:
+                    self.gameover = True
+                    self.won = True
+                    break
+                # TODO PERFORM HEURISTIC ON THE CANDIDATES
+                rand_index = random.randint(0, len(candidates) - 1)
+                unvisited_cleared_tiles.add(candidates[rand_index])
                 #self.kb.print_kb()
                 #return
-        
-        print("GAMEOVER")
+
+        if self.won:
+            print("WINNER WINNER CHICKEN DINNER")
+        else:
+            print("GAMEOVER")
         self.kb.print_kb()
         return
 
@@ -189,6 +198,7 @@ class MineSweeperAgent:
 
 
 if __name__ == '__main__':
+    '''
     kb = KnowledgeBase(5, 5)
     tile = kb.tile_arr[3][4]
     kb.visit_tile(tile, 0)
@@ -206,11 +216,9 @@ if __name__ == '__main__':
     # print(kb2.check_local_sat(kb.tile_arr[3][3]))
     # print(kb2.try_to_satisfy())
 
-    agent = MineSweeperAgent()
-    agent.kb = kb
-
-    kb.print_kb()
     result = agent.proof_by_contradiction(3,3)
+    '''
+    agent = MineSweeperAgent()
     print("proof " + str(result))
 
     agent = MineSweeperAgent()

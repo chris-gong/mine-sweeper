@@ -154,10 +154,12 @@ class KnowledgeBase():
                 elif tile.visited:
                     string += str(tile.adj_mines)+" "
                 else:
-                    string += "X "
+                    if tile.is_mined is Predicate.false:
+                        string += "C "
+                    else:
+                        string += "X "
             string += "\n"
         print(string)
-        return
 
     def get_unvisited_neighbors(self, tile):
         # TODO
@@ -166,7 +168,8 @@ class KnowledgeBase():
         y = tile.y
         for i in range(x-1, x+2):
             for j in range(y-1, y+2):
-                if (self.in_bounds(i, j) and not(tile.x == i and tile.y ==j)):
+                if (self.in_bounds(i, j) and self.tile_arr[i][j].is_mined is Predicate.undetermined
+                        and not(tile.x == i and tile.y == j)):
                     tlist.append(self.tile_arr[i][j])
         return tlist
 
@@ -177,6 +180,12 @@ class Tile():
         self.adj_mines = -1
         self.x = x
         self.y = y
+
+    def __hash__(self):
+        return hash((self.x,self.y))
+
+    def __eq__(self, other):
+        return (self.x == other.x and self.y == other.y)
 
 
 if __name__ == '__main__':

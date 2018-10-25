@@ -51,7 +51,7 @@ class MinesweeperGame:
     def render_grid(self):
         # cmap = colors.ListedColormap(['white', 'red', 'red', 'red', 'blue'])
         arraycopy = np.copy(self.grid)
-        arraycopy = np.rot90(arraycopy,3)
+        arraycopy = np.rot90(arraycopy,1)
         colors0 = plt.cm.binary(np.linspace(0, 1, 1))
         colors1 = plt.cm.Reds(np.linspace(.2, .8, 8))
         # colors1 = np.flip(colors1,0)
