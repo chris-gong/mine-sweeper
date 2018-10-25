@@ -35,6 +35,7 @@ class MineSweeperAgent:
 
     def new_human_game(self):
         # Query the user for a width and length
+        self.kb.print_kb()
         length = int(input("What is the length of the game board?"))
         width = int(input("What is the width of the game board?"))
         self.kb = KnowledgeBase(length, width)
@@ -222,6 +223,6 @@ if __name__ == '__main__':
     agent = MineSweeperAgent()
 
     agent = MineSweeperAgent()
-    agent.new_cpu_game()
+    agent.new_human_game()
     agent.play_game()
     agent.game.render_grid()
