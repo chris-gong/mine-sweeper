@@ -1,7 +1,7 @@
 from KnowledgeBaseMinesweeper import KnowledgeBase, Predicate
 from MinesweeperGame import MinesweeperGame
 from copy import deepcopy
-
+import random
 
 class GameTile:
     def __init__(self):
@@ -60,6 +60,7 @@ class MineSweeperAgent:
         while not self.gameover:
             if len(unvisited_cleared_tiles) != 0:
                 # If there are any safe nodes to go to make those moves
+                print("clearing cleared_tiles:"+str(len(unvisited_cleared_tiles)))
                 while len(unvisited_cleared_tiles) != 0:
                     tile = unvisited_cleared_tiles.pop()
                     self.query_tile(tile.x,tile.y)
@@ -69,6 +70,7 @@ class MineSweeperAgent:
                 continue
             if len(fringe) != 0:
                 # Nowhere safe rn to go to so search fringe for safe node
+                print("querying fringe")
                 for tile in fringe:
                     tiles_to_remove = []
                     is_tile_mined = self.proof_by_contradiction(tile.x,tile.y)
@@ -85,24 +87,39 @@ class MineSweeperAgent:
                     fringe.remove(tile)
                 fringe.update()
                 if len(unvisited_cleared_tiles) == 0:
-                    #Have to guess because query did not find anything
+                    # Have to guess because we only have undetermined tiles left,
+                    # no cleared tiles (predicate false or true)
                     print("guess - nowhere safe to go")
-                    self.kb.print_kb()
-                    return
+                    unvisited_cleared_tiles.add(fringe.pop())
+                    # self.kb.print_kb()
+                    # return
 
                 # TODO queries concluded nothing
             else:
                 # TODO If the fringe is empty that means all adjacent
                 # undiscovered nodes are mines so pick random undertermined mine
                 print("guess -surroundded by mines")
-                self.kb.print_kb()
-                return
+                # guess randomly on a unvisited tile because
+                # no adjacent tiles to visit (for e.g. remaining
+                # tiles are surrounded by mines
+                unvisited_tiles = []
+                for i in range(len(self.kb.tile_arr)):
+                    for j in range(len(self.kb.tile_arr[i])):
+                        if(not self.kb.tile_arr[i][j].visited):
+                            unvisited_tiles.append(self.kb.tile_arr[i][j])
+                rand_index = random.randint(0, len(unvisited_tiles) - 1)
+                unvisited_cleared_tiles.add(unvisited_tiles[rand_index])
+                #self.kb.print_kb()
+                #return
+        
         print("GAMEOVER")
         self.kb.print_kb()
         return
 
     def process_query(self, num, cur_tile):
         if num == 9:
+            print("gameover x = " + str(cur_tile.x))
+            print("gameover y = " + str(cur_tile.y))
             self.gameover = True
             self.won = False
             return
@@ -150,7 +167,8 @@ class MineSweeperAgent:
         # Add not p to KB and try to satisfy
         test_kb = deepcopy(self.kb)
         cur_tile = test_kb.tile_arr[x][y]
-        test_kb.unflag_mine(cur_tile)
+        #test_kb.unflag_mine(cur_tile)
+        cur_tile.is_mined = Predicate.false;
         p2 = test_kb.try_to_satisfy()
         # print("p1: " + str(p1))
         # print("p2: " + str(p2))
@@ -198,3 +216,4 @@ if __name__ == '__main__':
     agent = MineSweeperAgent()
     agent.new_cpu_game()
     agent.play_game()
+    agent.game.render_grid()
