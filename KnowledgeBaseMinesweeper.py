@@ -46,7 +46,7 @@ class KnowledgeBase():
 
     def try_to_satisfy(self):
         # TODO
-        possible_mines = []
+        possible_mines = set()
         for unsat_tile in self.unsatisfied_tiles:
             x = unsat_tile.x
             y = unsat_tile.y
@@ -57,7 +57,8 @@ class KnowledgeBase():
                             and self.tile_arr[i][j].is_mined is
                             Predicate.undetermined):
                         self.tile_arr[i][j].is_mined = Predicate.false
-                        possible_mines.append(self.tile_arr[i][j])
+                        possible_mines.add(self.tile_arr[i][j])
+        possible_mines = list(possible_mines)
         last_mine_stack = []
         subset_end = -1
         while True:
