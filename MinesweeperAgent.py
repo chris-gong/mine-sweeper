@@ -35,7 +35,6 @@ class MineSweeperAgent:
 
     def new_human_game(self):
         # Query the user for a width and length
-        self.kb.print_kb()
         length = int(input("What is the length of the game board?"))
         width = int(input("What is the width of the game board?"))
         self.kb = KnowledgeBase(length, width)
@@ -147,6 +146,8 @@ class MineSweeperAgent:
 
     def query_tile_human(self, x, y):
         # returns 0-8 for num of adj mines or 9 if the tile is mined
+        print("Current status of the KB")
+        self.kb.print_kb()
         querystring = "What is in space ({},{})", (x, y)
         num = int(input(querystring))
         cur_tile = self.kb.tile_arr[x][y]
