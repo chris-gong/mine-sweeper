@@ -2,15 +2,18 @@ from KnowledgeBaseMinesweeper import KnowledgeBase, Predicate
 from MinesweeperGame import MinesweeperGame
 from copy import deepcopy
 import random
+from enum import Enum
 
-class GameTile:
-    def __init__(self):
-        pass
+class GameType(Enum):
+    human = 1
+    cpu = 2
+    none = 3
+    pass
 
 
 class MineSweeperAgent:
     def __init__(self):
-        self.gameType = None
+        self.game_type = GameType.none
         self.kb = None
         self.gameover = False
         self.won = False
@@ -29,7 +32,7 @@ class MineSweeperAgent:
         self.width = width
         self.kb = KnowledgeBase(length, width)
         self.game = MinesweeperGame(length, width, num_mines)
-        self.game_type = "CPU"
+        self.game_type = GameType.cpu
         self.gameover = False
         self.won = False
 
@@ -37,13 +40,15 @@ class MineSweeperAgent:
         # Query the user for a width and length
         length = int(input("What is the length of the game board?"))
         width = int(input("What is the width of the game board?"))
+        self.length = length
+        self.width = width
         self.kb = KnowledgeBase(length, width)
-        self.game_type = "HUMAN"
+        self.game_type = GameType.human
         self.gameover = False
         self.won = False
 
     def play_game(self):
-        if self.gameType is not None:
+        if self.game_type is not GameType.none:
             # tried to play game when not possible
             pass
         # decide on which tile to query
@@ -139,13 +144,15 @@ class MineSweeperAgent:
             return
 
     def query_tile(self, x, y):
-        if self.gameType is "HUMAN":
+        if self.game_type is GameType.human:
             return self.query_tile_human(x, y)
         else:
             return self.query_tile_cpu(x, y)
 
     def query_tile_human(self, x, y):
         # returns 0-8 for num of adj mines or 9 if the tile is mined
+        print("Current status of the KB")
+        self.kb.print_kb()
         querystring = "What is in space ({},{})", (x, y)
         num = int(input(querystring))
         cur_tile = self.kb.tile_arr[x][y]
@@ -217,11 +224,11 @@ if __name__ == '__main__':
     # print(kb2.try_to_satisfy())
 
     result = agent.proof_by_contradiction(3,3)
+    print("proof " + str(result))
     '''
     agent = MineSweeperAgent()
-    print("proof " + str(result))
 
     agent = MineSweeperAgent()
-    agent.new_cpu_game()
+    agent.new_human_game()
     agent.play_game()
-    agent.game.render_grid()
+    # agent.game.render_grid()
