@@ -26,7 +26,7 @@ class MineSweeperAgent:
         num_mines = int(input("How many mines do you want the generated"
                               "map to have?"))
         '''
-        length,width,num_mines = (10,10,20)
+        length,width,num_mines = (30,15,50)
 
         self.length = length
         self.width = width
@@ -58,7 +58,7 @@ class MineSweeperAgent:
         unvisited_cleared_tiles = set()
         fringe = set() # unknown tiles that are adjacent to discovered nodes
 
-        first_tile = self.query_tile(int(self.length/2), int(self.width/2))
+        first_tile = self.query_tile(int(self.width/2), int(self.length/2))
         adj_unvisited = self.kb.get_unvisited_neighbors(first_tile)
         for tile in adj_unvisited:
             fringe.add(tile)
@@ -82,10 +82,12 @@ class MineSweeperAgent:
                     if is_tile_mined is Predicate.true:
                         self.kb.flag_mine(tile)
                         tiles_to_remove.append(tile)
+                        continue
                     elif is_tile_mined is Predicate.false:
                         tile.is_mined = Predicate.false
                         unvisited_cleared_tiles.add(tile)
                         tiles_to_remove.append(tile)
+                        continue
                     else:
                         continue
                 for tile in tiles_to_remove:
@@ -229,6 +231,6 @@ if __name__ == '__main__':
     agent = MineSweeperAgent()
 
     agent = MineSweeperAgent()
-    agent.new_human_game()
+    agent.new_cpu_game()
     agent.play_game()
     # agent.game.render_grid()
