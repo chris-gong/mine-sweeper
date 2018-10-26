@@ -1,0 +1,517 @@
+*JAVA*
+SUCCESSFUL COMPLETION:
+
+
+Welcome to AI player!
+Please enter the height: 
+Please enter the width: 
+Please enter # of bombs: 
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+
+-----------------
+Current Fringe: [x: 0, y: 4, prob: 1.0]
+AI chose clear cell: [0, 4]: 
+Enter state of cell [0, 4]: 
+1
+
+Player Grid: 
+[-, -, -, -, 1]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+
+Constraints after Math: [[x: 0, y: 3, value: null] + [x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0]]
+[x: 0, y: 3, prob: 0.6666666666666667, x: 1, y: 4, prob: 0.6666666666666667, x: 1, y: 3, prob: 0.6666666666666667]
+Size of unTraversedTiles: 21
+
+-----------------
+Current Fringe: []
+Since probability <= 0.7, AI chose random cell: [2, 3]: 
+Enter state of cell [2, 3]: 
+2
+
+Player Grid: 
+[-, -, -, -, 1]
+[-, -, -, -, -]
+[-, -, -, 2, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+
+Constraints after Math: [[x: 0, y: 3, value: null] + [x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 1, y: 3, value: null] + [x: 2, y: 2, value: null] + [x: 2, y: 4, value: null] + [x: 3, y: 3, value: null] + [x: 1, y: 2, value: null] + [x: 1, y: 4, value: null] + [x: 3, y: 2, value: null] + [x: 3, y: 4, value: null] = 2]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0]]
+[x: 1, y: 3, prob: 0.75, x: 2, y: 2, prob: 0.75, x: 2, y: 4, prob: 0.75, x: 3, y: 3, prob: 0.75, x: 1, y: 2, prob: 0.75, x: 1, y: 4, prob: 0.75, x: 3, y: 2, prob: 0.75, x: 3, y: 4, prob: 0.75, x: 0, y: 3, prob: 0.6666666666666667]
+
+-----------------
+Current Fringe: []
+The AI is making a relatively safe move at: [3, 3]... probability of success: 0.75.
+Enter state of cell [3, 3]: 
+1
+
+Player Grid: 
+[-, -, -, -, 1]
+[-, -, -, -, -]
+[-, -, -, 2, -]
+[-, -, -, 1, -]
+[-, -, -, -, -]
+
+Constraints after Math: [[x: 0, y: 3, value: null] + [x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 3, y: 2, value: null] + [x: 3, y: 4, value: null] + [x: 4, y: 3, value: null] + [x: 2, y: 2, value: null] + [x: 2, y: 4, value: null] + [x: 4, y: 2, value: null] + [x: 4, y: 4, value: null] = 1, [x: 1, y: 3, value: null] + [x: 2, y: 2, value: null] + [x: 2, y: 4, value: null] + [x: 1, y: 2, value: null] + [x: 1, y: 4, value: null] + [x: 3, y: 2, value: null] + [x: 3, y: 4, value: null] = 2]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0]]
+[x: 3, y: 2, prob: 0.8571428571428572, x: 3, y: 4, prob: 0.8571428571428572, x: 4, y: 3, prob: 0.8571428571428572, x: 2, y: 2, prob: 0.8571428571428572, x: 2, y: 4, prob: 0.8571428571428572, x: 4, y: 2, prob: 0.8571428571428572, x: 4, y: 4, prob: 0.8571428571428572, x: 1, y: 3, prob: 0.7142857142857143, x: 1, y: 2, prob: 0.7142857142857143, x: 1, y: 4, prob: 0.7142857142857143, x: 0, y: 3, prob: 0.6666666666666667]
+
+-----------------
+Current Fringe: []
+The AI is making a relatively safe move at: [3, 4]... probability of success: 0.86.
+Enter state of cell [3, 4]: 
+0
+
+Player Grid: 
+[-, -, -, -, 1]
+[-, -, -, -, -]
+[-, -, -, 2, C]
+[-, -, -, 1, 0]
+[-, -, -, C, C]
+
+Constraints after Math: [[x: 0, y: 3, value: null] + [x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 3, y: 2, value: null] + [x: 2, y: 2, value: null] + [x: 4, y: 2, value: null] = 1, [x: 1, y: 3, value: null] + [x: 2, y: 2, value: null] + [x: 1, y: 2, value: null] + [x: 1, y: 4, value: null] + [x: 3, y: 2, value: null] = 2]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0]]
+
+-----------------
+Current Fringe: [x: 2, y: 4, prob: 1.0, x: 4, y: 4, prob: 1.0, x: 4, y: 3, prob: 1.0]
+AI chose clear cell: [2, 4]: 
+Enter state of cell [2, 4]: 
+1
+
+Player Grid: 
+[-, -, -, C, 1]
+[-, -, -, -, -]
+[-, -, -, 2, 1]
+[-, -, -, 1, 0]
+[-, -, -, C, C]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 3, y: 2, value: null] + [x: 2, y: 2, value: null] + [x: 4, y: 2, value: null] = 1, [x: 2, y: 2, value: null] + [x: 1, y: 2, value: null] + [x: 3, y: 2, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0]]
+
+-----------------
+Current Fringe: [x: 4, y: 4, prob: 1.0, x: 4, y: 3, prob: 1.0, x: 0, y: 3, prob: 1.0]
+AI chose clear cell: [4, 4]: 
+Enter state of cell [4, 4]: 
+0
+
+Player Grid: 
+[-, -, -, C, 1]
+[-, -, -, -, -]
+[-, -, -, 2, 1]
+[-, -, -, 1, 0]
+[-, -, -, C, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 3, y: 2, value: null] + [x: 2, y: 2, value: null] + [x: 4, y: 2, value: null] = 1, [x: 2, y: 2, value: null] + [x: 1, y: 2, value: null] + [x: 3, y: 2, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0]]
+
+-----------------
+Current Fringe: [x: 4, y: 3, prob: 1.0, x: 0, y: 3, prob: 1.0]
+AI chose clear cell: [4, 3]: 
+Enter state of cell [4, 3]: 
+0
+
+Player Grid: 
+[-, -, -, C, 1]
+[-, -, C, -, -]
+[-, -, M, 2, 1]
+[-, -, C, 1, 0]
+[-, -, C, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0]]
+
+-----------------
+Current Fringe: [x: 0, y: 3, prob: 1.0, x: 4, y: 2, prob: 1.0, x: 3, y: 2, prob: 1.0, x: 1, y: 2, prob: 1.0, x: 3, y: 2, prob: 1.0]
+AI chose clear cell: [0, 3]: 
+Enter state of cell [0, 3]: 
+2
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, C, -, -]
+[-, -, M, 2, 1]
+[-, -, C, 1, 0]
+[-, -, C, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1]]
+
+-----------------
+Current Fringe: [x: 4, y: 2, prob: 1.0, x: 3, y: 2, prob: 1.0, x: 1, y: 2, prob: 1.0, x: 3, y: 2, prob: 1.0]
+AI chose clear cell: [4, 2]: 
+Enter state of cell [4, 2]: 
+0
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, C, -, -]
+[-, -, M, 2, 1]
+[-, C, C, 1, 0]
+[-, C, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0]]
+
+-----------------
+Current Fringe: [x: 3, y: 2, prob: 1.0, x: 1, y: 2, prob: 1.0, x: 3, y: 2, prob: 1.0, x: 4, y: 1, prob: 1.0, x: 3, y: 1, prob: 1.0]
+AI chose clear cell: [3, 2]: 
+Enter state of cell [3, 2]: 
+1
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, C, -, -]
+[-, C, M, 2, 1]
+[-, C, 1, 1, 0]
+[-, C, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0]]
+
+-----------------
+Current Fringe: [x: 1, y: 2, prob: 1.0, x: 3, y: 2, prob: 1.0, x: 4, y: 1, prob: 1.0, x: 3, y: 1, prob: 1.0, x: 2, y: 1, prob: 1.0]
+AI chose clear cell: [1, 2]: 
+Enter state of cell [1, 2]: 
+3
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, 3, -, -]
+[-, C, M, 2, 1]
+[-, C, 1, 1, 0]
+[-, C, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0]]
+
+-----------------
+Current Fringe: [x: 3, y: 2, prob: 1.0, x: 4, y: 1, prob: 1.0, x: 3, y: 1, prob: 1.0, x: 2, y: 1, prob: 1.0]
+AI chose clear cell: [3, 2]: 
+Enter state of cell [3, 2]: 
+1
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, 3, -, -]
+[-, C, M, 2, 1]
+[-, C, 1, 1, 0]
+[-, C, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0]]
+
+-----------------
+Current Fringe: [x: 4, y: 1, prob: 1.0, x: 3, y: 1, prob: 1.0, x: 2, y: 1, prob: 1.0]
+AI chose clear cell: [4, 1]: 
+Enter state of cell [4, 1]: 
+1
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, 3, -, -]
+[-, C, M, 2, 1]
+[-, C, 1, 1, 0]
+[-, 1, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 4, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0]]
+
+-----------------
+Current Fringe: [x: 3, y: 1, prob: 1.0, x: 2, y: 1, prob: 1.0]
+AI chose clear cell: [3, 1]: 
+Enter state of cell [3, 1]: 
+2
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, 3, -, -]
+[C, C, M, 2, 1]
+[-, 2, 1, 1, 0]
+[-, 1, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 4, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0]]
+
+-----------------
+Current Fringe: [x: 2, y: 1, prob: 1.0, x: 2, y: 0, prob: 1.0]
+AI chose clear cell: [2, 1]: 
+Enter state of cell [2, 1]: 
+2
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, 3, -, -]
+[C, 2, M, 2, 1]
+[-, 2, 1, 1, 0]
+[-, 1, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 4, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 0, value: null] + [x: 3, y: 0, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0]]
+
+-----------------
+Current Fringe: [x: 2, y: 0, prob: 1.0]
+AI chose clear cell: [2, 0]: 
+Enter state of cell [2, 0]: 
+1
+
+Player Grid: 
+[-, -, M, 2, 1]
+[-, -, 3, -, -]
+[1, 2, M, 2, 1]
+[-, 2, 1, 1, 0]
+[-, 1, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 4, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 0, value: null] + [x: 3, y: 0, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0]]
+[x: 1, y: 1, prob: 0.6666666666666667, x: 1, y: 3, prob: 0.6666666666666667, x: 0, y: 1, prob: 0.6666666666666667, x: 1, y: 0, prob: 0.6666666666666667, x: 3, y: 0, prob: 0.6666666666666667, x: 1, y: 4, prob: 0.5, x: 4, y: 0, prob: 0.5]
+Size of unTraversedTiles: 1
+
+-----------------
+Current Fringe: []
+Since probability <= 0.7, AI chose random cell: [0, 0]: 
+Enter state of cell [0, 0]: 
+1
+
+Player Grid: 
+[1, -, M, 2, 1]
+[-, -, 3, -, -]
+[1, 2, M, 2, 1]
+[-, 2, 1, 1, 0]
+[-, 1, 0, 0, 0]
+
+Constraints after Math: [[x: 1, y: 4, value: null] + [x: 1, y: 3, value: null] = 1, [x: 4, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 0, y: 1, value: null] = 1, [x: 1, y: 1, value: null] + [x: 1, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 0, y: 1, value: null] + [x: 1, y: 0, value: null] + [x: 1, y: 1, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0], [x: 0, y: 0, value: 0]]
+[x: 1, y: 1, prob: 0.6666666666666667, x: 1, y: 3, prob: 0.6666666666666667, x: 0, y: 1, prob: 0.6666666666666667, x: 1, y: 0, prob: 0.6666666666666667, x: 3, y: 0, prob: 0.6666666666666667, x: 1, y: 4, prob: 0.5, x: 4, y: 0, prob: 0.5]
+Size of unTraversedTiles: 7
+
+-----------------
+Current Fringe: []
+Since probability <= 0.7, AI chose random cell: [1, 4]: 
+Enter state of cell [1, 4]: 
+1
+
+Player Grid: 
+[1, C, M, 2, 1]
+[M, C, 3, M, 1]
+[1, 2, M, 2, 1]
+[-, 2, 1, 1, 0]
+[-, 1, 0, 0, 0]
+
+Constraints after Math: [[x: 4, y: 0, value: null] + [x: 3, y: 0, value: null] = 1, [x: 1, y: 0, value: null] + [x: 3, y: 0, value: null] = 1]
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0], [x: 0, y: 0, value: 0], [x: 1, y: 4, value: 0], [x: 1, y: 3, value: 1], [x: 1, y: 1, value: 0], [x: 0, y: 1, value: 0], [x: 1, y: 0, value: 1]]
+
+-----------------
+Current Fringe: [x: 1, y: 1, prob: 1.0, x: 0, y: 1, prob: 1.0]
+AI chose clear cell: [1, 1]: 
+Enter state of cell [1, 1]: 
+3
+
+Player Grid: 
+[1, C, M, 2, 1]
+[M, 3, 3, M, 1]
+[1, 2, M, 2, 1]
+[C, 2, 1, 1, 0]
+[M, 1, 0, 0, 0]
+
+Constraints after Math: []
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0], [x: 0, y: 0, value: 0], [x: 1, y: 4, value: 0], [x: 1, y: 3, value: 1], [x: 1, y: 1, value: 0], [x: 0, y: 1, value: 0], [x: 1, y: 0, value: 1], [x: 3, y: 0, value: 0], [x: 4, y: 0, value: 1]]
+
+-----------------
+Current Fringe: [x: 0, y: 1, prob: 1.0, x: 3, y: 0, prob: 1.0]
+AI chose clear cell: [0, 1]: 
+Enter state of cell [0, 1]: 
+2
+
+Player Grid: 
+[1, 2, M, 2, 1]
+[M, 3, 3, M, 1]
+[1, 2, M, 2, 1]
+[C, 2, 1, 1, 0]
+[M, 1, 0, 0, 0]
+
+Constraints after Math: []
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0], [x: 0, y: 0, value: 0], [x: 1, y: 4, value: 0], [x: 1, y: 3, value: 1], [x: 1, y: 1, value: 0], [x: 0, y: 1, value: 0], [x: 1, y: 0, value: 1], [x: 3, y: 0, value: 0], [x: 4, y: 0, value: 1]]
+
+-----------------
+Current Fringe: [x: 3, y: 0, prob: 1.0]
+AI chose clear cell: [3, 0]: 
+Enter state of cell [3, 0]: 
+1
+
+Player Grid: 
+[1, 2, M, 2, 1]
+[M, 3, 3, M, 1]
+[1, 2, M, 2, 1]
+[1, 2, 1, 1, 0]
+[M, 1, 0, 0, 0]
+
+Constraints after Math: []
+Known Variables List: [[x: 0, y: 4, value: 0], [x: 2, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 3, y: 4, value: 0], [x: 2, y: 4, value: 0], [x: 4, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 0, y: 3, value: 0], [x: 4, y: 2, value: 0], [x: 3, y: 2, value: 0], [x: 2, y: 2, value: 1], [x: 1, y: 2, value: 0], [x: 0, y: 2, value: 1], [x: 4, y: 1, value: 0], [x: 3, y: 1, value: 0], [x: 2, y: 1, value: 0], [x: 2, y: 0, value: 0], [x: 0, y: 0, value: 0], [x: 1, y: 4, value: 0], [x: 1, y: 3, value: 1], [x: 1, y: 1, value: 0], [x: 0, y: 1, value: 0], [x: 1, y: 0, value: 1], [x: 3, y: 0, value: 0], [x: 4, y: 0, value: 1]]
+
+AI successfully traversed the system!
+
+
+FAILURE:
+
+
+Welcome to AI player!
+Please enter the height: 
+Please enter the width: 
+Please enter # of bombs: 
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+
+-----------------
+Current Fringe: [x: 4, y: 4, prob: 1.0]
+AI chose clear cell: [4, 4]: 
+Enter state of cell [4, 4]: 
+0
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, C, C]
+[-, -, -, C, 0]
+
+Constraints after Math: []
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0]]
+
+-----------------
+Current Fringe: [x: 3, y: 4, prob: 1.0, x: 4, y: 3, prob: 1.0, x: 3, y: 3, prob: 1.0]
+AI chose clear cell: [3, 4]: 
+Enter state of cell [3, 4]: 
+1
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, C, 1]
+[-, -, -, C, 0]
+
+Constraints after Math: [[x: 2, y: 4, value: null] + [x: 2, y: 3, value: null] = 1]
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0]]
+
+-----------------
+Current Fringe: [x: 4, y: 3, prob: 1.0, x: 3, y: 3, prob: 1.0]
+AI chose clear cell: [4, 3]: 
+Enter state of cell [4, 3]: 
+1
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, -, C, 1]
+[-, -, -, 1, 0]
+
+Constraints after Math: [[x: 2, y: 4, value: null] + [x: 2, y: 3, value: null] = 1, [x: 4, y: 2, value: null] + [x: 3, y: 2, value: null] = 1]
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0]]
+
+-----------------
+Current Fringe: [x: 3, y: 3, prob: 1.0]
+AI chose clear cell: [3, 3]: 
+Enter state of cell [3, 3]: 
+2
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, C, -, -]
+[-, -, -, 2, 1]
+[-, -, -, 1, 0]
+
+Constraints after Math: [[x: 2, y: 4, value: null] + [x: 2, y: 3, value: null] = 1, [x: 4, y: 2, value: null] + [x: 3, y: 2, value: null] = 1]
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 2, y: 2, value: 0]]
+
+-----------------
+Current Fringe: [x: 2, y: 2, prob: 1.0]
+AI chose clear cell: [2, 2]: 
+Enter state of cell [2, 2]: 
+2
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, 2, -, -]
+[-, -, -, 2, 1]
+[-, -, -, 1, 0]
+
+Constraints after Math: [[x: 2, y: 4, value: null] + [x: 2, y: 3, value: null] = 1, [x: 4, y: 2, value: null] + [x: 3, y: 2, value: null] = 1, [x: 1, y: 2, value: null] + [x: 2, y: 1, value: null] + [x: 2, y: 3, value: null] + [x: 3, y: 2, value: null] + [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] + [x: 3, y: 1, value: null] = 2]
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 2, y: 2, value: 0]]
+[x: 1, y: 2, prob: 0.7142857142857143, x: 2, y: 1, prob: 0.7142857142857143, x: 2, y: 3, prob: 0.7142857142857143, x: 3, y: 2, prob: 0.7142857142857143, x: 1, y: 1, prob: 0.7142857142857143, x: 1, y: 3, prob: 0.7142857142857143, x: 3, y: 1, prob: 0.7142857142857143, x: 2, y: 4, prob: 0.5, x: 4, y: 2, prob: 0.5]
+
+-----------------
+Current Fringe: []
+The AI is making a relatively safe move at: [3, 1]... probability of success: 0.71.
+Enter state of cell [3, 1]: 
+2
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, 2, -, -]
+[-, 2, -, 2, 1]
+[-, -, -, 1, 0]
+
+Constraints after Math: [[x: 2, y: 4, value: null] + [x: 2, y: 3, value: null] = 1, [x: 4, y: 2, value: null] + [x: 3, y: 2, value: null] = 1, [x: 1, y: 2, value: null] + [x: 2, y: 1, value: null] + [x: 2, y: 3, value: null] + [x: 3, y: 2, value: null] + [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] = 2, [x: 2, y: 1, value: null] + [x: 3, y: 0, value: null] + [x: 4, y: 1, value: null] + [x: 2, y: 0, value: null] + [x: 4, y: 0, value: null] = 1]
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 2, y: 2, value: 0], [x: 3, y: 1, value: 0]]
+[x: 2, y: 1, prob: 0.8, x: 3, y: 0, prob: 0.8, x: 4, y: 1, prob: 0.8, x: 2, y: 0, prob: 0.8, x: 4, y: 0, prob: 0.8, x: 1, y: 2, prob: 0.6666666666666667, x: 2, y: 3, prob: 0.6666666666666667, x: 3, y: 2, prob: 0.6666666666666667, x: 1, y: 1, prob: 0.6666666666666667, x: 1, y: 3, prob: 0.6666666666666667, x: 2, y: 4, prob: 0.5, x: 4, y: 2, prob: 0.5]
+
+-----------------
+Current Fringe: []
+The AI is making a relatively safe move at: [3, 0]... probability of success: 0.8.
+Enter state of cell [3, 0]: 
+1
+
+Player Grid: 
+[-, -, -, -, -]
+[-, -, -, -, -]
+[-, -, 2, -, -]
+[1, 2, -, 2, 1]
+[-, -, -, 1, 0]
+
+Constraints after Math: [[x: 2, y: 4, value: null] + [x: 2, y: 3, value: null] = 1, [x: 4, y: 2, value: null] + [x: 3, y: 2, value: null] = 1, [x: 2, y: 0, value: null] + [x: 4, y: 0, value: null] + [x: 2, y: 1, value: null] + [x: 4, y: 1, value: null] = 1, [x: 1, y: 2, value: null] + [x: 2, y: 1, value: null] + [x: 2, y: 3, value: null] + [x: 3, y: 2, value: null] + [x: 1, y: 1, value: null] + [x: 1, y: 3, value: null] = 2]
+Known Variables List: [[x: 4, y: 4, value: 0], [x: 3, y: 4, value: 0], [x: 4, y: 3, value: 0], [x: 3, y: 3, value: 0], [x: 2, y: 2, value: 0], [x: 3, y: 1, value: 0], [x: 3, y: 0, value: 0]]
+[x: 2, y: 0, prob: 0.75, x: 4, y: 0, prob: 0.75, x: 2, y: 1, prob: 0.75, x: 4, y: 1, prob: 0.75, x: 1, y: 2, prob: 0.6666666666666667, x: 2, y: 3, prob: 0.6666666666666667, x: 3, y: 2, prob: 0.6666666666666667, x: 1, y: 1, prob: 0.6666666666666667, x: 1, y: 3, prob: 0.6666666666666667, x: 2, y: 4, prob: 0.5, x: 4, y: 2, prob: 0.5]
+
+-----------------
+Current Fringe: []
+The AI is making a relatively safe move at: [4, 1]... probability of success: 0.75.
+Enter state of cell [4, 1]: 
+9
+
+The AI touched a bomb at: [4, 1]. Game over!
+
+
+
+
+Performance: For a fixed, reasonable size of board, what is the largest number of mines that your program can still usually solve? Where does your program struggle?
+
+JAVA:
+For a 15 X 15 board, our program can solve up to 50 mines. Our program struggles guessing when there are more mines than 50.
+
+
+
+
+
+Efficiency: What are some of the space or time constraints you run into in implementing this program? Are these problem specific constraints, or implementation specific constraints? In the case of implementation constraints, what could you improve on?
+
+Improvements: Consider augmenting your program’s knowledge in the following way - when the user inputs the size of the board, they also input the total number of mines on the board. How can this information be modeled and included in your program, and used to inform action? How can you use this information to effectively improve the performance of your program, particularly in terms of the number of mines it can effectively solve.
+
