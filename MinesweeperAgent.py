@@ -1,4 +1,4 @@
-from KnowledgeBaseMinesweeper import KnowledgeBase, Predicate
+from MinesweeperKB import KnowledgeBase, Predicate
 from MinesweeperGame import MinesweeperGame
 from copy import deepcopy
 import random
