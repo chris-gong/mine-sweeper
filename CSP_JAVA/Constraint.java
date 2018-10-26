@@ -1,3 +1,7 @@
+/**
+ * Class that represents a constraint object.
+ */
+
 package minesweeper;
 
 import java.util.List;
