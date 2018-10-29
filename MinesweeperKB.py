@@ -60,16 +60,20 @@ class KnowledgeBase():
                         self.tile_arr[i][j].is_mined = Predicate.false
                         possible_mines.add(self.tile_arr[i][j])
         possible_mines = list(possible_mines)
-        print("trying to satisfy:"+str(len(possible_mines)))
+        # print("trying to satisfy:"+str(len(possible_mines)))
         last_mine_stack = []
+        # attempted_sol = 0
         subset_end = -1
         while True:
             if subset_end+1 >= len(possible_mines):
+                # attempted_sol += 1
                 global_sat = self.check_global_sat()
                 if global_sat is True:
+                    # print("attempted sol:"+str(attempted_sol))
                     return True
                 else:
                     if len(last_mine_stack) == 0:
+                        # print("attempted sol:"+str(attempted_sol))
                         return False
                     subset_end = last_mine_stack.pop()
                     possible_mines[subset_end].is_mined = Predicate.false
@@ -83,6 +87,7 @@ class KnowledgeBase():
             if local_sat <= 0:
                 continue
             elif local_sat == 0 and self.check_global_sat:
+                # print("attempted sol:"+str(attempted_sol))
                 return True
             elif local_sat >= 0:
                 last_mine_stack.pop()
@@ -188,6 +193,9 @@ class Tile():
 
     def __eq__(self, other):
         return (self.x == other.x and self.y == other.y)
+
+    def coord_str(self):
+        return f"({self.x},{self.y})"
 
 
 if __name__ == '__main__':
