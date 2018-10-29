@@ -3,6 +3,7 @@ from MinesweeperGame import MinesweeperGame
 from copy import deepcopy
 import random
 from enum import Enum
+import queue
 
 class GameType(Enum):
     human = 1
@@ -26,7 +27,7 @@ class MineSweeperAgent:
         num_mines = int(input("How many mines do you want the generated"
                               "map to have?"))
         '''
-        length,width,num_mines = (30,15,50)
+        length,width,num_mines = (10,10,20)
 
         self.length = length
         self.width = width
@@ -57,8 +58,13 @@ class MineSweeperAgent:
         # First guess is middle of game
         unvisited_cleared_tiles = set()
         fringe = set() # unknown tiles that are adjacent to discovered nodes
+        dependence_chain = {}
+        dependence_roots = []
 
         first_tile = self.query_tile(int(self.width/2), int(self.length/2))
+        last_visited = first_tile
+        dependence_chain[last_visited] = []
+        dependence_roots.append(first_tile)
         adj_unvisited = self.kb.get_unvisited_neighbors(first_tile)
         for tile in adj_unvisited:
             fringe.add(tile)
@@ -66,47 +72,49 @@ class MineSweeperAgent:
             if len(unvisited_cleared_tiles) != 0:
                 # If there are any safe nodes to go to make those moves
                 print("clearing cleared_tiles:"+str(len(unvisited_cleared_tiles)))
-                while len(unvisited_cleared_tiles) != 0:
+                # while len(unvisited_cleared_tiles) != 0:
+                if True:
                     tile = unvisited_cleared_tiles.pop()
                     self.query_tile(tile.x,tile.y)
                     adj_unvisited = self.kb.get_unvisited_neighbors(tile)
-                    for tile in adj_unvisited:
-                        fringe.add(tile)
-                continue
+                    for neighbor in adj_unvisited:
+                        fringe.add(neighbor)
+                    last_visited = tile
+                    dependence_chain[last_visited] = []
+                # continue
             if len(fringe) != 0:
                 # Nowhere safe rn to go to so search fringe for safe node
                 print("querying fringe")
                 tiles_to_remove = []
                 for tile in fringe:
                     is_tile_mined = self.proof_by_contradiction(tile.x,tile.y)
-                    if is_tile_mined is Predicate.true:
-                        self.kb.flag_mine(tile)
+                    if is_tile_mined is not Predicate.undetermined:
+                        if is_tile_mined is Predicate.true:
+                            self.kb.flag_mine(tile)
+                        elif is_tile_mined is Predicate.false:
+                            tile.is_mined = Predicate.false
+                            unvisited_cleared_tiles.add(tile)
                         tiles_to_remove.append(tile)
-                        continue
-                    elif is_tile_mined is Predicate.false:
-                        tile.is_mined = Predicate.false
-                        unvisited_cleared_tiles.add(tile)
-                        tiles_to_remove.append(tile)
+                        dependence_chain[last_visited].append(tile)
                         continue
                     else:
+                        # case where we discover nothing
                         continue
                 for tile in tiles_to_remove:
                     fringe.remove(tile)
-                if len(unvisited_cleared_tiles) == 0:
+                if len(unvisited_cleared_tiles) == 0 and len(fringe) != 0:
                     # Have to guess because we only have undetermined tiles left,
                     # no cleared tiles (predicate false or true)
                     print("guess - nowhere safe to go")
                     guess_tile = fringe.pop()
                     print("guessing: "+str(guess_tile.x)+','+str(guess_tile.y))
                     unvisited_cleared_tiles.add(guess_tile)
-                    # self.kb.print_kb()
-                    # return
+                    dependence_roots.append(guess_tile)
 
                 # TODO queries concluded nothing
-            else:
+            elif len(unvisited_cleared_tiles) == 0:
                 # TODO If the fringe is empty that means all adjacent
                 # undiscovered nodes are mines so pick random undertermined mine
-                print("guess -surroundded by mines")
                 # guess randomly on a unvisited tile because
                 # no adjacent tiles to visit (for e.g. remaining
                 # tiles are surrounded by mines
@@ -119,14 +127,17 @@ class MineSweeperAgent:
                     self.gameover = True
                     self.won = True
                     break
+                print("guess -surroundded by mines")
                 # TODO PERFORM HEURISTIC ON THE CANDIDATES
                 rand_index = random.randint(0, len(candidates) - 1)
-                unvisited_cleared_tiles.add(candidates[rand_index])
-                #self.kb.print_kb()
+                chosen = candidates[rand_index]
+                unvisited_cleared_tiles.add(chosen)
+                dependence_roots.append(chosen)
                 #return
 
         if self.won:
             print("WINNER WINNER CHICKEN DINNER")
+            self.print_dep_chain(dependence_roots,dependence_chain)
         else:
             print("GAMEOVER")
         self.kb.print_kb()
@@ -203,6 +214,20 @@ class MineSweeperAgent:
             return
         return
 
+    def print_dep_chain(self, root_list, dep_chain):
+        for root in root_list:
+            self.print_sub_chain(root, dep_chain, 0)
+
+    def print_sub_chain(self, root, dep_chain, level):
+        line = ""
+        if level != 0:
+            line += "||"
+            line += "\t||" * (level -1)
+            line += "----"
+        print(line + root.coord_str())
+        for child in dep_chain[root]:
+            if child.is_mined is Predicate.false:
+                self.print_sub_chain(child, dep_chain, level+1)
 
 
 
