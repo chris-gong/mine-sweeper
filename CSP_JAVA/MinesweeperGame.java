@@ -1,6 +1,9 @@
+/**
+ * Class that creates a master grid by randomly placing bombs and calculating clue cell values.
+ */
+
 package minesweeper;
 
-//import java.util.Arrays;
 import java.util.Random;
 
 public class MinesweeperGame {

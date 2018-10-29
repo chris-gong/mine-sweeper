@@ -1,3 +1,7 @@
+/**
+ * Class that represents a coordinate object.
+ */
+
 package minesweeper;
 
 public class Coordinate implements Comparable<Coordinate> {

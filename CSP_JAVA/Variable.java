@@ -1,3 +1,7 @@
+/**
+ * Class that represents a variable object.
+ */
+
 package minesweeper;
 
 public class Variable {

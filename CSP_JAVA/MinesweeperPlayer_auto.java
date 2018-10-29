@@ -1,5 +1,5 @@
 /**
- * Main player of MineSweeper game without automation for cell queries.
+ * Main player of MineSweeper game with automation for cell queries.
  */
 
 package minesweeper;
@@ -14,7 +14,7 @@ import java.util.Queue;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MinesweeperPlayer {
+public class MinesweeperPlayer_auto {
 
 	private static List<Constraint> constraints;
 	private static List<Variable> masterVariables;
@@ -38,11 +38,24 @@ public class MinesweeperPlayer {
 		height = scanner.nextInt();
 		System.out.println("Please enter the width: ");
 		width = scanner.nextInt();
+		System.out.println("Please enter # of bombs: ");
+		int bombs = scanner.nextInt();
 
 		// Simple dimension check
-		if (height < 2 || width < 2) {
+		if (height < 2 || width < 2 || bombs >= width * height) {
 			System.out.print("ERROR: dimension and/or bombs");
 			System.exit(0);
+		}
+
+		// Create master grid
+		MinesweeperGame.height = height;
+		MinesweeperGame.width = width;
+		int[][] master = MinesweeperGame.getGrid(bombs);
+
+		// Print master grid
+		System.out.println("\nMaster Grid: ");
+		for (int x = 0; x < master.length; x++) {
+			System.out.println(Arrays.toString(master[x]));
 		}
 
 		// Create player grid
@@ -162,21 +175,17 @@ public class MinesweeperPlayer {
 				}
 			}
 			
-			// Get user input for AI's cell choice
-			System.out.println("Enter state of cell [" + row + ", " + col + "]: ");
-			int value = scanner.nextInt();
-			
 			// After row and col have been selected, check if AI selected a mine.
-			if (value == 9) {
-				System.out.println("\nThe AI touched a bomb at: [" + row + ", " + col + "]. Game over!");
+			if (master[row][col] == 9) {
+				System.out.println("\nThe AI touched a mine at: [" + row + ", " + col + "]. Game over!");
 				System.exit(0);
 			}
 			// The AI did not select a mine, therefore the cell is clear!
 			else {
-				player[row][col] = (char)(value + '0');
+				player[row][col] = (char)(master[row][col] + '0');
 				masterVariables.add(new Variable(row, col, 0));
 
-				setConstraint(row, col, value);
+				setConstraint(row, col, master[row][col]);
 				Collections.sort(constraints);
 
 				int sizeold;
@@ -211,10 +220,21 @@ public class MinesweeperPlayer {
 			}
 		}
 
-		// Print success
-		if (masterVariables.size() == width * height) {
-			System.out.println("\nAI successfully traversed the system!");
+		// Check if AI's grid equals the master grid
+		for (int x = 0; x < height; x++) {
+			for (int y = 0; y < width; y++) {
+				if ((Character.getNumericValue(player[x][y]) == master[x][y]) || (player[x][y] == 'M' && master[x][y] == 9)) {
+					continue;
+				}
+				else {
+					System.out.println("\nAI did not complete the game correctly!");
+					System.exit(0);
+				}
+			}
 		}
+
+		// Print success
+		System.out.println("\nAI successfully traversed the system!");
 
 		scanner.close();
 	}
