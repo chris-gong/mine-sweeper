@@ -69,31 +69,35 @@ class MineSweeperAgent:
         for tile in adj_unvisited:
             fringe.add(tile)
         while not self.gameover:
+            print("")
             if len(unvisited_cleared_tiles) != 0:
                 # If there are any safe nodes to go to make those moves
-                print("clearing cleared_tiles:"+str(len(unvisited_cleared_tiles)))
+                print("Clear tiles:"+str(len(unvisited_cleared_tiles)))
                 # while len(unvisited_cleared_tiles) != 0:
-                if True:
-                    tile = unvisited_cleared_tiles.pop()
-                    self.query_tile(tile.x,tile.y)
-                    adj_unvisited = self.kb.get_unvisited_neighbors(tile)
-                    for neighbor in adj_unvisited:
-                        fringe.add(neighbor)
-                    last_visited = tile
-                    dependence_chain[last_visited] = []
-                # continue
+                print("Current state of the knowledge base")
+                self.kb.print_kb()
+                tile = unvisited_cleared_tiles.pop()
+                self.query_tile(tile.x,tile.y)
+                print("Visiting tile: "+tile.coord_str())
+                adj_unvisited = self.kb.get_unvisited_neighbors(tile)
+                for neighbor in adj_unvisited:
+                    fringe.add(neighbor)
+                last_visited = tile
+                dependence_chain[last_visited] = []
             if len(fringe) != 0:
                 # Nowhere safe rn to go to so search fringe for safe node
-                print("querying fringe")
+                # print("querying fringe")
                 tiles_to_remove = []
                 for tile in fringe:
                     is_tile_mined = self.proof_by_contradiction(tile.x,tile.y)
                     if is_tile_mined is not Predicate.undetermined:
                         if is_tile_mined is Predicate.true:
                             self.kb.flag_mine(tile)
+                            print(tile.coord_str()+ " flagged as mine")
                         elif is_tile_mined is Predicate.false:
                             tile.is_mined = Predicate.false
                             unvisited_cleared_tiles.add(tile)
+                            print(tile.coord_str()+ " flagged as clear")
                         tiles_to_remove.append(tile)
                         dependence_chain[last_visited].append(tile)
                         continue
