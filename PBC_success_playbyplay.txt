@@ -1,0 +1,1287 @@
+querying fringe
+(6,4) flagged as clear
+(5,4) flagged as clear
+(4,6) flagged as clear
+(6,6) flagged as clear
+(4,5) flagged as clear
+(5,6) flagged as clear
+(4,4) flagged as clear
+(6,5) flagged as clear
+Clear tiles:8
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C X X X 
+X X X X C 0 C X X X 
+X X X X C C C X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(7,3) flagged as clear
+(6,3) flagged as clear
+(7,4) flagged as clear
+(7,5) flagged as clear
+(5,3) flagged as clear
+Clear tiles:12
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X C C C X X 
+X X X X C C 0 C X X 
+X X X X C 0 C C X X 
+X X X X C C C X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(4,3) flagged as clear
+Clear tiles:12
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X X C 0 0 C X X 
+X X X X C 0 C C X X 
+X X X X C C C X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(4,7) flagged as clear
+(5,7) flagged as clear
+(3,6) flagged as clear
+(3,7) flagged as clear
+(3,5) flagged as clear
+Clear tiles:16
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X X C 0 0 C X X 
+X X X C C 0 C C X X 
+X X X C 0 C C X X X 
+X X X C C C X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(6,7) flagged as clear
+(7,6) flagged as clear
+(7,7) flagged as clear
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X X C 0 0 C X X 
+X X X C C 0 C C X X 
+X X X C 0 C 0 C X X 
+X X X C C C C C X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(3,4) flagged as mine
+Clear tiles:17
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C X X 
+X X X C 0 C 0 C X X 
+X X X C C C C C X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+Clear tiles:16
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C X X 
+X X X C 0 0 0 C X X 
+X X X C C C C C X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(8,7) flagged as clear
+(8,6) flagged as clear
+(8,5) flagged as clear
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C C X 
+X X X C 0 0 0 0 C X 
+X X X C C C C C C X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:17
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C C X 
+X X X C 0 0 0 0 C X 
+X X X C C C C 1 C X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(2,7) flagged as clear
+(2,6) flagged as clear
+(4,8) flagged as clear
+(2,8) flagged as clear
+(3,8) flagged as clear
+Clear tiles:21
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C C X 
+X X C C 0 0 0 0 C X 
+X X C 0 C C C 1 C X 
+X X C C C X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:20
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C 2 X 
+X X C C 0 0 0 0 C X 
+X X C 0 C C C 1 C X 
+X X C C C X X X X X 
+X X X X X X X X X X 
+
+querying fringe
+(7,8) flagged as clear
+(6,8) flagged as clear
+(8,8) flagged as mine
+(5,8) flagged as clear
+Clear tiles:22
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X C C C C X X 
+X X X M C 0 0 C X X 
+X X X C 1 0 C C 2 X 
+X X C C 0 0 0 0 C X 
+X X C 0 C C 0 1 C X 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+(3,3) flagged as clear
+Clear tiles:22
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C C C X X 
+X X X M 1 0 0 C X X 
+X X X C 1 0 C C 2 X 
+X X C C 0 0 0 0 C X 
+X X C 0 C C 0 1 C X 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:21
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C X X 
+X X X C 1 0 C C 2 X 
+X X C C 0 0 0 0 C X 
+X X C 0 C C 0 1 C X 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+(2,5) flagged as mine
+Clear tiles:20
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C X X 
+X X M C 1 0 C C 2 X 
+X X C 1 0 0 0 0 C X 
+X X C 0 C C 0 1 C X 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:19
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C X X 
+X X M C 1 0 C C 2 X 
+X X C 1 0 0 0 0 1 X 
+X X C 0 C C 0 1 C X 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+(1,5) flagged as mine
+(1,6) flagged as mine
+(1,7) flagged as mine
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C X X 
+X M M C 1 0 C C 2 X 
+X M 4 1 0 0 0 0 1 X 
+X M C 0 C C 0 1 C X 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+(9,7) flagged as clear
+(9,4) flagged as mine
+(8,4) flagged as clear
+Clear tiles:19
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C C M 
+X M M C 1 0 C 0 2 X 
+X M 4 1 0 0 0 0 1 X 
+X M C 0 C C 0 1 C C 
+X X C C C C C C M X 
+X X X X X X X X X X 
+
+querying fringe
+(9,8) flagged as clear
+(9,5) flagged as mine
+(9,6) flagged as clear
+Clear tiles:20
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C C M 
+X M M C 1 0 C 0 2 M 
+X M 4 1 0 0 0 0 1 C 
+X M C 0 C C 0 1 1 C 
+X X C C C C C C M C 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:19
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C C M 
+X M M C 1 0 C 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M C 0 C C 0 1 1 C 
+X X C C C C C C M C 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X X M 1 0 0 C C M 
+X M M C 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M C 0 C C 0 1 1 C 
+X X C C C C C C M C 
+X X X X X X X X X X 
+
+querying fringe
+(2,4) flagged as clear
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C 1 C X X 
+X X C M 1 0 0 C C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M C 0 C C 0 1 1 C 
+X X C C C C C C M C 
+X X X X X X X X X X 
+
+querying fringe
+Clear tiles:17
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C X X 
+X X C M 1 0 0 C C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M C 0 C C 0 1 1 C 
+X X C C C C C C M C 
+X X X X X X X X X X 
+
+querying fringe
+(1,8) flagged as clear
+Clear tiles:17
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C X X 
+X X C M 1 0 0 C C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C C 0 1 1 C 
+X C C C C C C C M C 
+X X X X X X X X X X 
+
+querying fringe
+(5,9) flagged as clear
+(6,9) flagged as clear
+(7,9) flagged as clear
+Clear tiles:19
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C X X 
+X X C M 1 0 0 C C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C C 0 1 1 C 
+X C C C C C 0 C M C 
+X X X X X C C C X X 
+
+querying fringe
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C X X 
+X X C M 1 0 0 C C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X C C C C C 0 C M C 
+X X X X X C C C X X 
+
+querying fringe
+(8,3) flagged as mine
+Clear tiles:17
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C M X 
+X X C M 1 0 0 1 C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X C C C C C 0 C M C 
+X X X X X C C C X X 
+
+querying fringe
+Clear tiles:16
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C M X 
+X X C M 1 0 0 1 C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X C C 1 C C 0 C M C 
+X X X X X C C C X X 
+
+querying fringe
+Clear tiles:15
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C 1 1 C M X 
+X X C M 1 0 0 1 C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X 2 C 1 C C 0 C M C 
+X X X X X C C C X X 
+
+querying fringe
+(3,2) flagged as clear
+(6,2) flagged as mine
+(4,2) flagged as clear
+(7,2) flagged as clear
+(5,2) flagged as clear
+Clear tiles:18
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C X X 
+X X X C 1 1 1 C M X 
+X X C M 1 0 0 1 C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X 2 C 1 C C 0 C M C 
+X X X X X C C C X X 
+
+querying fringe
+(8,9) flagged as mine
+Clear tiles:17
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C X X 
+X X X C 1 1 1 C M X 
+X X C M 1 0 0 1 C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X X C C C M X 
+
+querying fringe
+Clear tiles:16
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C X X 
+X X X C 1 1 1 C M X 
+X X 4 M 1 0 0 1 C M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X X C C C M X 
+
+querying fringe
+(9,3) flagged as clear
+Clear tiles:16
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C X X 
+X X X C 1 1 1 C M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X X C C C M X 
+
+querying fringe
+(8,2) flagged as clear
+Clear tiles:16
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 C 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X X C C C M X 
+
+querying fringe
+Clear tiles:15
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X X C C C M X 
+
+querying fringe
+(4,9) flagged as clear
+Clear tiles:15
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X C 0 C C M X 
+
+querying fringe
+Clear tiles:14
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 C 1 C C 0 2 M C 
+X X X X C 0 0 C M X 
+
+querying fringe
+(3,9) flagged as mine
+(2,9) flagged as clear
+Clear tiles:14
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 C 1 1 C 0 2 M C 
+X X C M C 0 0 C M X 
+
+querying fringe
+(1,9) flagged as clear
+Clear tiles:14
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 C 0 2 M C 
+X C C M C 0 0 C M X 
+
+querying fringe
+(9,9) flagged as clear
+Clear tiles:14
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 C 0 2 M 2 
+X C C M C 0 0 C M C 
+
+querying fringe
+Clear tiles:13
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M C C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 0 0 2 M 2 
+X C C M C 0 0 C M C 
+
+querying fringe
+Clear tiles:12
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M 3 C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 0 0 2 M 2 
+X C C M C 0 0 C M C 
+
+querying fringe
+Clear tiles:11
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X X C C C M 3 C X 
+X X X C 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 0 0 2 M 2 
+X C C M 1 0 0 C M C 
+
+querying fringe
+(2,3) flagged as clear
+(2,2) flagged as clear
+Clear tiles:12
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X C C C C M 3 C X 
+X X C 1 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 0 0 2 M 2 
+X C C M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:11
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X C C C C M 3 C X 
+X X C 1 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:10
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X 1 C C C M 3 C X 
+X X C 1 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 C 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:9
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X 1 C C C M 3 C X 
+X X C 1 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 1 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:8
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X 1 1 C C M 3 C X 
+X X C 1 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 1 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:7
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X 1 1 C C M 3 2 X 
+X X C 1 1 1 1 2 M C 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 1 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+(9,2) flagged as clear
+Clear tiles:7
+Current state of the knowledge base
+X X X X X X X X X X 
+X X X X X X X X X X 
+X X 1 1 C C M 3 2 C 
+X X C 1 1 1 1 2 M 2 
+X X 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 1 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+(1,3) flagged as clear
+(9,1) flagged as clear
+(1,4) flagged as mine
+(5,1) flagged as clear
+(1,2) flagged as clear
+(6,1) flagged as clear
+(4,1) flagged as clear
+(1,1) flagged as clear
+Clear tiles:13
+Current state of the knowledge base
+X X X X X X X X X X 
+X C X X C C C X X C 
+X C 1 1 C 1 M 3 2 C 
+X C C 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 1 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:12
+Current state of the knowledge base
+X X X X X X X X X X 
+X C X X C C C X X C 
+X C 1 1 C 1 M 3 2 C 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+X M 2 0 0 0 0 1 1 1 
+X 2 2 1 1 0 0 2 M 2 
+X C 1 M 1 0 0 C M C 
+
+querying fringe
+(0,7) flagged as mine
+(0,8) flagged as clear
+(0,9) flagged as clear
+Clear tiles:13
+Current state of the knowledge base
+X X X X X X X X X X 
+X C X X C C C X X C 
+X C 1 1 C 1 M 3 2 C 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+C 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 C M C 
+
+querying fringe
+(2,1) flagged as clear
+(3,1) flagged as mine
+Clear tiles:13
+Current state of the knowledge base
+X X X X X X X X X X 
+X C C M C C C X X C 
+X C 1 1 1 1 M 3 2 C 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+C 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:12
+Current state of the knowledge base
+X X X X X X X X X X 
+X C C M C C C X X C 
+X C 1 1 1 1 M 3 2 C 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 C M C 
+
+querying fringe
+Clear tiles:11
+Current state of the knowledge base
+X X X X X X X X X X 
+X C C M C C C X X C 
+X C 1 1 1 1 M 3 2 C 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 2 M C 
+
+querying fringe
+(7,1) flagged as mine
+(8,1) flagged as clear
+Clear tiles:11
+Current state of the knowledge base
+X X X X X X X X X X 
+X C C M C C C M C C 
+X C 1 1 1 1 M 3 2 1 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 2 M C 
+
+querying fringe
+(6,0) flagged as clear
+(7,0) flagged as clear
+(5,0) flagged as clear
+Clear tiles:13
+Current state of the knowledge base
+X X X X X C C C X X 
+X C C M C C 2 M C C 
+X C 1 1 1 1 M 3 2 1 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 2 M C 
+
+Clear tiles:12
+Current state of the knowledge base
+X X X X X C C C X X 
+X C C M C C 2 M C C 
+X C 1 1 1 1 M 3 2 1 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+C 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:11
+Current state of the knowledge base
+X X X X X C C C X X 
+X C C M C C 2 M C C 
+X C 1 1 1 1 M 3 2 1 
+X C 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+Clear tiles:10
+Current state of the knowledge base
+X X X X X C C C X X 
+X C C M C C 2 M C C 
+X C 1 1 1 1 M 3 2 1 
+X 2 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+(8,0) flagged as clear
+(9,0) flagged as clear
+Clear tiles:11
+Current state of the knowledge base
+X X X X X C C C C C 
+X C C M C C 2 M C 0 
+X C 1 1 1 1 M 3 2 1 
+X 2 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+Clear tiles:10
+Current state of the knowledge base
+X X X X X C C C 1 C 
+X C C M C C 2 M C 0 
+X C 1 1 1 1 M 3 2 1 
+X 2 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+Clear tiles:9
+Current state of the knowledge base
+X X X X X C C C 1 C 
+X C 3 M C C 2 M C 0 
+X C 1 1 1 1 M 3 2 1 
+X 2 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+(4,0) flagged as mine
+Clear tiles:8
+Current state of the knowledge base
+X X X X M C C C 1 C 
+X C 3 M C 2 2 M C 0 
+X C 1 1 1 1 M 3 2 1 
+X 2 2 1 1 1 1 2 M 2 
+X M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+(0,3) flagged as clear
+(0,1) flagged as clear
+(0,4) flagged as mine
+(0,2) flagged as clear
+Clear tiles:10
+Current state of the knowledge base
+X X X X M C C C 1 C 
+C C 3 M C 2 2 M C 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+Clear tiles:9
+Current state of the knowledge base
+X X X X M C C C 1 0 
+C C 3 M C 2 2 M C 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+Clear tiles:8
+Current state of the knowledge base
+X X X X M C C C 1 0 
+C C 3 M C 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+Clear tiles:7
+Current state of the knowledge base
+X X X X M 1 C C 1 0 
+C C 3 M C 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+(3,0) flagged as clear
+(1,0) flagged as mine
+(2,0) flagged as mine
+Clear tiles:7
+Current state of the knowledge base
+X M M C M 1 C C 1 0 
+C C 3 M 2 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+(0,0) flagged as clear
+Clear tiles:7
+Current state of the knowledge base
+C M M C M 1 C C 1 0 
+C 2 3 M 2 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:6
+Current state of the knowledge base
+1 M M C M 1 C C 1 0 
+C 2 3 M 2 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:5
+Current state of the knowledge base
+1 M M C M 1 1 C 1 0 
+C 2 3 M 2 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:4
+Current state of the knowledge base
+1 M M C M 1 1 C 1 0 
+1 2 3 M 2 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:3
+Current state of the knowledge base
+1 M M C M 1 1 1 1 0 
+1 2 3 M 2 2 2 M 1 0 
+C 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:2
+Current state of the knowledge base
+1 M M C M 1 1 1 1 0 
+1 2 3 M 2 2 2 M 1 0 
+0 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+Clear tiles:1
+Current state of the knowledge base
+1 M M 3 M 1 1 1 1 0 
+1 2 3 M 2 2 2 M 1 0 
+0 0 1 1 1 1 M 3 2 1 
+C 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+guess -surroundded by mines
+Clear tiles:1
+Current state of the knowledge base
+1 M M 3 M 1 1 1 1 0 
+1 2 3 M 2 2 2 M 1 0 
+0 0 1 1 1 1 M 3 2 1 
+2 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+X M M 2 1 0 0 0 2 M 
+X M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+querying fringe
+(0,6) flagged as clear
+Clear tiles:1
+Current state of the knowledge base
+1 M M 3 M 1 1 1 1 0 
+1 2 3 M 2 2 2 M 1 0 
+0 0 1 1 1 1 M 3 2 1 
+2 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+4 M M 2 1 0 0 0 2 M 
+C M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
+WINNER WINNER CHICKEN DINNER
+(5,5)
+||----(6,4)
+||	||----(7,3)
+||	||	||----(8,2)
+||	||----(6,3)
+||	||----(7,4)
+||	||----(7,5)
+||	||	||----(9,7)
+||	||	||----(8,4)
+||	||	||	||----(9,3)
+||	||	||	||	||----(9,2)
+||	||	||	||	||	||----(8,1)
+||	||----(5,3)
+||----(5,4)
+||	||----(4,3)
+||	||	||----(3,2)
+||	||	||----(4,2)
+||	||	||	||----(2,1)
+||	||	||----(7,2)
+||	||	||----(5,2)
+||	||	||	||----(1,3)
+||	||	||	||----(9,1)
+||	||	||	||	||----(8,0)
+||	||	||	||	||----(9,0)
+||	||	||	||----(5,1)
+||	||	||	||----(1,2)
+||	||	||	||	||----(0,3)
+||	||	||	||	||----(0,1)
+||	||	||	||	||----(0,2)
+||	||	||	||----(6,1)
+||	||	||	||	||----(6,0)
+||	||	||	||	||----(7,0)
+||	||	||	||	||----(5,0)
+||	||	||	||----(4,1)
+||	||	||	||	||----(3,0)
+||	||	||	||----(1,1)
+||	||	||	||	||----(0,0)
+||----(4,6)
+||	||----(4,7)
+||	||----(5,7)
+||	||----(3,6)
+||	||----(3,7)
+||	||	||----(2,7)
+||	||	||	||----(1,8)
+||	||	||----(2,6)
+||	||	||----(4,8)
+||	||	||	||----(2,9)
+||	||	||----(2,8)
+||	||	||	||----(1,9)
+||	||	||	||	||----(0,8)
+||	||	||	||	||----(0,9)
+||	||	||----(3,8)
+||	||----(3,5)
+||	||	||----(2,4)
+||----(6,6)
+||	||----(6,7)
+||	||	||----(7,8)
+||	||	||----(6,8)
+||	||	||	||----(5,9)
+||	||	||	||	||----(4,9)
+||	||	||	||----(6,9)
+||	||	||	||----(7,9)
+||	||	||----(5,8)
+||	||----(7,6)
+||	||	||----(8,7)
+||	||	||	||----(9,8)
+||	||	||	||	||----(9,9)
+||	||	||	||----(9,6)
+||	||	||----(8,6)
+||	||	||----(8,5)
+||	||----(7,7)
+||----(4,5)
+||----(5,6)
+||----(4,4)
+||	||----(3,3)
+||	||	||----(2,3)
+||	||	||----(2,2)
+||----(6,5)
+(0,5)
+||----(0,6)
+1 M M 3 M 1 1 1 1 0 
+1 2 3 M 2 2 2 M 1 0 
+0 0 1 1 1 1 M 3 2 1 
+2 2 2 1 1 1 1 2 M 2 
+M M 4 M 1 0 0 1 3 M 
+4 M M 2 1 0 0 0 2 M 
+4 M 4 1 0 0 0 0 1 1 
+M M 2 0 0 0 0 1 1 1 
+2 2 2 1 1 0 0 2 M 2 
+0 0 1 M 1 0 0 2 M 2 
+
